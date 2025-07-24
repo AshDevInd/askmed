@@ -7,7 +7,7 @@ const axiosInstance = axios.create({
   },
 });
 
-export const fetchData = async (endpoint, data = null) => {
+export const apiRequest = async (endpoint, data = null) => {
   try {
     const response = await axiosInstance.post(endpoint, data);
     return response.data;
@@ -16,4 +16,8 @@ export const fetchData = async (endpoint, data = null) => {
   }
 };
 
-export const createPost = (newPost) => fetchData('/posts', newPost);
+export const userLoginRequest = async () => {
+    
+}
+
+// export const createPost = (newPost) => apiRequest('/posts', newPost);

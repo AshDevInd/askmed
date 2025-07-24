@@ -17,13 +17,15 @@ import * as Location from 'expo-location';
 import colors from '../../constants/colors';
 import CustomHeader from '../../components/CustomHeader';
 import { Image } from 'expo-image';
-
+import { getDataList } from '../../app/useApi';
 // Demo confirmed order for pinning
 const confirmedOrder = {
   orderId: "ORD12345",
   status: "confirmed",
   eta: "12:15 PM",
 };
+
+const { data, error, isLoading } = usePostData('/your-endpoint', formData);
 
 const shops = [
   {
